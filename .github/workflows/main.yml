@@ -19,10 +19,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      
-      - name: Speed up the packages installation process
-        run: composer global require doctrine/dbal; composer global require mathjax/mathjax
-        working-directory: backend
        
       - name: Install Packages
         run: composer install --no-dev
